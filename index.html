@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ComicCraft AI</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🎨 <span>ComicCraft</span> <b>AI</b></div>
+    <div class="badge">Powered by Gemini</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">AI COMIC STORY CREATOR</p>
+      <h1>Turn your idea into a <span>comic story.</span></h1>
+      <p class="subtitle">Create characters, scenes, dialogue and cinematic image prompts in seconds.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="card form-card">
+        <h2>✍️ Your story</h2>
+        <label>Story idea</label>
+        <textarea id="idea" placeholder="Example: A school student discovers a tiny robot under the old library..."></textarea>
+
+        <div class="grid">
+          <div>
+            <label>Genre</label>
+            <select id="genre">
+              <option>Adventure</option>
+              <option>Fantasy</option>
+              <option>Science Fiction</option>
+              <option>Comedy</option>
+              <option>Mystery</option>
+              <option>Superhero</option>
+              <option>Horror</option>
+              <option>Romance</option>
+            </select>
+          </div>
+          <div>
+            <label>Panels</label>
+            <select id="panels">
+              <option>4</option>
+              <option selected>6</option>
+              <option>8</option>
+              <option>10</option>
+              <option>12</option>
+            </select>
+          </div>
+        </div>
+
+        <label>Characters <small>(optional)</small></label>
+        <input id="characters" placeholder="e.g. Maya, 17, curious inventor; Bolt, friendly robot">
+
+        <button id="generate">✨ Generate Comic</button>
+        <p id="status" class="status"></p>
+      </div>
+
+      <div class="card result-card">
+        <div class="result-head">
+          <h2>📖 Your comic</h2>
+          <button id="download" class="secondary" disabled>Download JSON</button>
+        </div>
+        <div id="result" class="empty">
+          <div class="empty-icon">🗯️</div>
+          <h3>Your story will appear here</h3>
+          <p>Enter an idea and click Generate Comic.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
